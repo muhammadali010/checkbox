@@ -1,0 +1,42 @@
+.block {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.block input {
+    display: none;
+}
+
+.card {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+}
+
+.card:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition-delay: 1s;
+    transition: all 1s;
+}
+
+input:checked+.card {
+    background-color: #2196F3;
+}
+
+input:checked+.card:before {
+    transform: translateX(26px);
+}
